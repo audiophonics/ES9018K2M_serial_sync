@@ -1,0 +1,20 @@
+
+##Made by Fujituys for Audiophonics
+##Audiophonics ES9018K2M Serial sync
+##Save this as /usr/lib/systemd/system/ES9018K2M_serial_sync.service
+
+[Unit]
+Description=Audiophonics ES9018K2M Serial sync Service
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/ES9018K2M_serial_sync.py
+ExecReload=/usr/bin/kill -HUP $MAINPID
+KillMode=process
+Restart=always
+RestartSec=10
+StartLimitInterval=30
+StartLimitBurst=20
+
+[Install]
+WantedBy=multi-user.target
