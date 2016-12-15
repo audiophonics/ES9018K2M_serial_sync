@@ -1,9 +1,9 @@
 
 #How to install ES9018K2M_serial_sync for RuneAudio
 
-This ES9018K2M_serial_sync is made by Audiophonics for the RaspDac-Touch devices
+This ES9018K2M_serial_sync is made by Audiophonics for the RaspDac-Touch devices.
 The script send by serial the bitrate, volume, and audio filter.
-The serial tram look like this "A,X,X,X". 
+The serial data look like this "A,X,X,X". 
 
 Exp for a 16bit music at 50% of volume and filter 1: "A,0,50,1"
 
