@@ -8,7 +8,7 @@ The serial tram look like this "A,X,X,X".
 Exp for a 16bit music at 50% of volume and filter 1: "A,0,50,1"
 
 ##Get started:
-Connecte to your Raspberry Pi running RuneAudio by ssh using Putty or any ssh client
+Connect to your Raspberry Pi running RuneAudio by ssh using Putty or any ssh client
 
 User: root, and password: rune
 
@@ -38,4 +38,4 @@ Exp on linux : ssh root@runeaudio.local
 	systemctl enable ES9018K2M_serial_sync
 	```
 
-Reboot your Raspberry Pi and selecte hardware volume in the "MPD" page of RuneAudio
+Reboot your Raspberry Pi and select "hardware volume" in the "MPD" page of RuneAudio
