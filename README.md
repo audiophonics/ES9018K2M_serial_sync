@@ -38,7 +38,7 @@ Exp on linux : ssh root@runeaudio.local
 	```
 	chmod 755 ES9018K2M_serial_sync/ES9018K2M_serial_sync.py
 	mv ES9018K2M_serial_sync/ES9018K2M_serial_sync.py /usr/local/bin
-	mv ES9018K2M_serial_sync/ES9018K2M_serial_sync.service /usr/lib/systemd/system/ES9018K2M_serial_sync.service
+	mv ES9018K2M_serial_sync/ES9018K2M_serial_sync.service /usr/lib/systemd/system/
 	systemctl enable ES9018K2M_serial_sync
 	```
 
@@ -80,10 +80,12 @@ Exp on linux : ssh pi@moode.local
 	git clone https://github.com/audiophonics/ES9018K2M_serial_sync.git
 	```
 
-4. Install the script:
+5. Install the script:
 	```
 	chmod 755 ES9018K2M_serial_sync/ES9018K2M_serial_sync.py
-	mv ES9018K2M_serial_sync/ES9018K2M_serial_sync.py /usr/local/bin
-	mv ES9018K2M_serial_sync/ES9018K2M_serial_sync.service /etc/systemd/system/ES9018K2M_serial_sync.service
-	systemctl enable ES9018K2M_serial_sync
+	sudo mv ES9018K2M_serial_sync/ES9018K2M_serial_sync.py /usr/local/bin
+	sudo mv ES9018K2M_serial_sync/ES9018K2M_serial_sync.service /etc/systemd/system/
+	sudo systemctl enable ES9018K2M_serial_sync
 	```
+
+Reboot your Raspberry Pi and select "hardware volume" in the "MPD" page of MoodeAudio
