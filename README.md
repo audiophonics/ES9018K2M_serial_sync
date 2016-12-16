@@ -26,8 +26,8 @@ Exp on linux : ssh root@runeaudio.local
 	```
 	nano /boot/config.txt
 	```
-	nano /boot/config.txt and uncomment #dtoverlay=hifiberry-dac
-	save the file with ctrl+o and exit with ctrl+x
+	And uncomment #dtoverlay=hifiberry-dac
+	Save the file with ctrl+o and exit with ctrl+x
 
 3. Clone our github:
 	```
@@ -71,10 +71,12 @@ Exp on linux : ssh pi@moode.local
 	save the file with ctrl+o and exit with ctrl+x
 
 3. Edit cmdline.txt file
-	Replace the full line by this one:
+	Open the cmdline.txt file and replace the full line by this one:
 	```
+	sudo nano /boot/config.txt
 	dwc_otg.lpm_enable=0 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4  elevator=deadline fsck.repair=yes rootwait
 	```
+	Save the file with ctrl+o and exit with ctrl+x
 
 4. Clone our github:
 	```
@@ -89,5 +91,12 @@ Exp on linux : ssh pi@moode.local
 	sudo systemctl enable ES9018K2M_serial_sync
 	rm -r ES9018K2M_serial_sync
 	```
+
+6. Edit the ES9018K2M_serial_sync for MoodeAudio:
+	Comment the line 9 with a '#' and uncomment the line 11 by remove the '#' 
+	```
+	sudo nano /usr/local/bin/ES9018K2M_serial_sync/ES9018K2M_serial_sync.py
+	```
+	Save the file with ctrl+o and exit with ctrl+x
 
 Reboot your Raspberry Pi and select "hardware volume" in the "MPD" page of MoodeAudio

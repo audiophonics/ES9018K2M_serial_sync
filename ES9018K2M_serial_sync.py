@@ -3,8 +3,12 @@
 
 # Audiophonics 2016 Serial Driver for mpd
 # ES9018K2M product page: http://www.audiophonics.fr/fr/dac-diy/audiophonics-i-sabre-dac-es9018k2m-raspberry-pi-3-pi-2-a-b-i2s-p-11500.html
-#Made by Fujitus
+# Made by Fujitus
 #
+# For RuneAudio
+serial_port = '/dev/ttyS0'
+# For MoodeAudio
+#serial_port = '/dev/serial0'
 # IF using RPI-DAC driver
 #driver = "A,1"
 # IF using Hifiberry driver
@@ -31,7 +35,7 @@ def MpdGetVolume(mpd):
 if __name__ == '__main__':
         MPD_HOST = 'localhost'
         MPD_PORT = '6600'
-        ser = serial.Serial('/dev/ttyS0', 2400)
+        ser = serial.Serial(serial_port, 2400)
 	ser.isOpen()
         mpd = MPDClient()
         filtre = 1

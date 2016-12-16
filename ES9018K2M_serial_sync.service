@@ -1,7 +1,8 @@
 
 ##Made by Fujituys for Audiophonics
 ##Audiophonics ES9018K2M Serial sync
-##Save this as /usr/lib/systemd/system/ES9018K2M_serial_sync.service
+##Save this as /usr/lib/systemd/system/ES9018K2M_serial_sync.service on RuneAudio
+##or save as /usr/systemd/system/ES9018K2M_serial_sync.service on MoodeAudio
 
 [Unit]
 Description=Audiophonics ES9018K2M Serial sync Service
