@@ -40,6 +40,7 @@ Exp on linux : ssh root@runeaudio.local
 	mv ES9018K2M_serial_sync/ES9018K2M_serial_sync.py /usr/local/bin
 	mv ES9018K2M_serial_sync/ES9018K2M_serial_sync.service /usr/lib/systemd/system/
 	systemctl enable ES9018K2M_serial_sync
+	rm -r ES9018K2M_serial_sync 
 	```
 
 Reboot your Raspberry Pi and select "hardware volume" in the "MPD" page of RuneAudio
@@ -47,7 +48,7 @@ Reboot your Raspberry Pi and select "hardware volume" in the "MPD" page of RuneA
 ##For MoodeAudio
 
 ###Get started:
-Connect to your Raspberry Pi running RuneAudio by ssh using Putty or any ssh client
+Connect to your Raspberry Pi running MoodeAudio by ssh using Putty or any ssh client
 
 User: pi, and password: raspberry
 
@@ -86,6 +87,7 @@ Exp on linux : ssh pi@moode.local
 	sudo mv ES9018K2M_serial_sync/ES9018K2M_serial_sync.py /usr/local/bin
 	sudo mv ES9018K2M_serial_sync/ES9018K2M_serial_sync.service /etc/systemd/system/
 	sudo systemctl enable ES9018K2M_serial_sync
+	rm -r ES9018K2M_serial_sync
 	```
 
 Reboot your Raspberry Pi and select "hardware volume" in the "MPD" page of MoodeAudio
