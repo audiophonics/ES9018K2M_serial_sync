@@ -21,12 +21,12 @@ Exp on linux : ssh root@runeaudio.local
 	pacman -Sy python2-pyserial pacman -S python2-mpd
 	```
 
-2. Edit config file:
+2. Edit config file:\n
 	Edit the /boot/config.txt
 	```
 	nano /boot/config.txt
 	```
-	And uncomment #dtoverlay=hifiberry-dac
+	And uncomment #dtoverlay=hifiberry-dac\n
 	Save the file with ctrl+o and exit with ctrl+x
 
 3. Clone our github:
@@ -61,7 +61,7 @@ Exp on linux : ssh pi@moode.local
 	sudo apt-get install python-serial
 	```
 
-2. Edit config file:
+2. Edit config file:\n
 	Edit and add this two line in /boot/config.txt
 	```
 	sudo nano /boot/config.txt	
@@ -70,7 +70,7 @@ Exp on linux : ssh pi@moode.local
 	```
 	save the file with ctrl+o and exit with ctrl+x
 
-3. Edit cmdline.txt file
+3. Edit cmdline.txt file:\n
 	Open the cmdline.txt file and replace the full line by this one:
 	```
 	sudo nano /boot/config.txt
@@ -92,7 +92,7 @@ Exp on linux : ssh pi@moode.local
 	rm -r ES9018K2M_serial_sync
 	```
 
-6. Edit the ES9018K2M_serial_sync for MoodeAudio:
+6. Edit the ES9018K2M_serial_sync for MoodeAudio:\n
 	Comment the line 9 with a '#' and uncomment the line 11 by remove the '#' 
 	```
 	sudo nano /usr/local/bin/ES9018K2M_serial_sync/ES9018K2M_serial_sync.py
