@@ -46,12 +46,10 @@ if __name__ == '__main__':
         	while True:
 			bitrate = MpdGetAudio(mpd)
 			time.sleep(0.1)
-                        #print (bitrate)
                         volume = MpdGetVolume(mpd)
-                        #print (volume)
                         send = str(bitrate) + "," + str(volume) + "," + str(filtre)
-			print(send)
 			if (send != last_send):
+				print(send)
 				last_send = send
 	                        ser.write(send.encode('utf-8'))
 	except KeyboardInterrupt:
