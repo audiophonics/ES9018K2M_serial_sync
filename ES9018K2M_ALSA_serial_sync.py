@@ -42,7 +42,7 @@ def MpdGetVolume(mpd):
 
 #ALSA Mixer Volume
 def Getvolume():
-        amixervol = "amixer | tail -1 | cut -d'[' -f2 | cut -c 1-2"
+        amixervol = "amixer | tail -1 | cut -d'[' -f2 | cut -d '%' -f1"
 	process = subprocess.Popen(amixervol, stdout=subprocess.PIPE , shell=True)
 	os.waitpid(process.pid, 0)[1]
 	volcut = process.stdout.read().strip()
